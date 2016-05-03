@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns="http://ns.taverna.org.uk/2010/scufl2#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="WorkflowBundleDocument" xml:base="./" xsi:schemaLocation="http://ns.taverna.org.uk/2010/scufl2# http://ns.taverna.org.uk/2010/scufl2/scufl2.xsd http://www.w3.org/1999/02/22-rdf-syntax-ns# http://ns.taverna.org.uk/2010/scufl2/rdf.xsd">
+    <WorkflowBundle rdf:about="">
+        <name>Workflow1</name>
+        <globalBaseURI rdf:resource="http://ns.taverna.org.uk/2010/workflowBundle/3e6ed6a4-25c5-423a-960e-a5450802b897/"/>
+        <mainWorkflow rdf:resource="workflow/Workflow1/"/>
+        <workflow>
+            <Workflow rdf:about="workflow/Workflow1/">
+                <rdfs:seeAlso rdf:resource="workflow/Workflow1.rdf"/>
+            </Workflow>
+        </workflow>
+        <mainProfile rdf:resource="profile/taverna-2.4.0/"/>
+        <profile>
+            <Profile rdf:about="profile/taverna-2.4.0/">
+                <rdfs:seeAlso rdf:resource="profile/taverna-2.4.0.rdf"/>
+            </Profile>
+        </profile>
+    </WorkflowBundle>
+</rdf:RDF>

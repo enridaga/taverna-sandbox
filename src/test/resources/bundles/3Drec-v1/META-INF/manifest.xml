@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest:manifest xmlns:manifest="urn:oasis:names:tc:opendocument:xmlns:manifest:1.0">
+ <manifest:file-entry manifest:media-type="text/turtle" manifest:full-path="annotation/"/>
+ <manifest:file-entry manifest:media-type="text/turtle" manifest:full-path="annotation/02a6e877-a4f0-44f9-9730-6b60a55092a6.ttl" manifest:size="140"/>
+ <manifest:file-entry manifest:media-type="text/turtle" manifest:full-path="annotation/62ca526d-286b-4eb6-9287-946c9d438022.ttl" manifest:size="113"/>
+ <manifest:file-entry manifest:media-type="text/turtle" manifest:full-path="annotation/be267836-3986-4164-8e32-fd4a91264ba0.ttl" manifest:size="166"/>
+ <manifest:file-entry manifest:media-type="text/turtle" manifest:full-path="annotation/7097e237-15fa-4816-9fdd-5186dc2faa18.ttl" manifest:size="129"/>
+ <manifest:file-entry manifest:media-type="text/turtle" manifest:full-path="annotation/712e90d6-5c02-4a93-a288-1306df8aa23b.ttl" manifest:size="170"/>
+ <manifest:file-entry manifest:media-type="text/turtle" manifest:full-path="annotation/f660df49-7f64-4042-bdea-0db3b0d95f03.ttl" manifest:size="116"/>
+ <manifest:file-entry manifest:media-type="text/turtle" manifest:full-path="annotation/6af4beea-43ac-452c-8800-b6da9e4389c6.ttl" manifest:size="109"/>
+ <manifest:file-entry manifest:media-type="text/turtle" manifest:full-path="annotation/064c06f0-c250-4d9d-9816-14a15078b421.ttl" manifest:size="1092"/>
+ <manifest:file-entry manifest:media-type="text/turtle" manifest:full-path="annotation/e7a0e125-ffb2-4179-9f87-4fb6c481ce02.ttl" manifest:size="303"/>
+ <manifest:file-entry manifest:media-type="text/turtle" manifest:full-path="annotation/6646e4e4-5a5d-4a0a-8710-23a3e0bb2b3b.ttl" manifest:size="317"/>
+ <manifest:file-entry manifest:media-type="text/turtle" manifest:full-path="annotation/4626c95a-b2cc-4dfc-bcae-ddedeed4ec4a.ttl" manifest:size="248"/>
+ <manifest:file-entry manifest:media-type="text/turtle" manifest:full-path="annotation/ff8a7a9f-568a-4b9c-acfc-9777f89ac9d0.ttl" manifest:size="317"/>
+ <manifest:file-entry manifest:media-type="application/vnd.taverna.t2flow+xml" manifest:full-path="history/"/>
+ <manifest:file-entry manifest:media-type="application/vnd.taverna.t2flow+xml" manifest:full-path="history/3e6ed6a4-25c5-423a-960e-a5450802b897.t2flow" manifest:size="42688"/>
+ <manifest:file-entry manifest:media-type="application/rdf+xml" manifest:full-path="workflow/"/>
+ <manifest:file-entry manifest:media-type="application/rdf+xml" manifest:full-path="workflow/Workflow1.rdf" manifest:size="21643"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.4.0/"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.4.0/configuration/"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.4.0/configuration/3DReconstructionApplication.json" manifest:size="306"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.4.0/configuration/3DReconstructionApplication-proc.json" manifest:size="2"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.4.0/configuration/AvarageTimeMatcher.json" manifest:size="306"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.4.0/configuration/AvarageTimeMatcher-proc.json" manifest:size="2"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.4.0/configuration/AvarageTimeSIFT.json" manifest:size="306"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.4.0/configuration/AvarageTimeSIFT-proc.json" manifest:size="2"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.4.0/configuration/AvarageTimeTracker.json" manifest:size="306"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.4.0/configuration/AvarageTimeTracker-proc.json" manifest:size="2"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.4.0/configuration/SFTPtransportDataToCluster.json" manifest:size="343"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.4.0/configuration/SFTPtransportDataToCluster-proc.json" manifest:size="2"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.4.0/configuration/SFTPtransportMetadataAndResultsToLocal.json" manifest:size="306"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.4.0/configuration/SFTPtransportMetadataAndResultsToLocal-proc.json" manifest:size="2"/>
+ <manifest:file-entry manifest:media-type="application/rdf+xml" manifest:full-path="profile/taverna-2.4.0.rdf" manifest:size="23027"/>
+ <manifest:file-entry manifest:media-type="application/rdf+xml" manifest:full-path="workflowBundle.rdf" manifest:size="1236" manifest:version="0.4.0"/>
+</manifest:manifest>

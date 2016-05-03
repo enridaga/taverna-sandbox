@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns="http://ns.taverna.org.uk/2010/scufl2#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProfileDocument" xml:base="taverna-2.4.0/" xsi:schemaLocation="http://ns.taverna.org.uk/2010/scufl2# http://ns.taverna.org.uk/2010/scufl2/scufl2.xsd http://www.w3.org/1999/02/22-rdf-syntax-ns# http://ns.taverna.org.uk/2010/scufl2/rdf.xsd">
+    <Profile rdf:about="">
+        <name>taverna-2.4.0</name>
+        <processorBinding rdf:resource="processorbinding/3DReconstructionApplication/"/>
+        <processorBinding rdf:resource="processorbinding/AvarageTimeMatcher/"/>
+        <processorBinding rdf:resource="processorbinding/AvarageTimeSIFT/"/>
+        <processorBinding rdf:resource="processorbinding/AvarageTimeTracker/"/>
+        <processorBinding rdf:resource="processorbinding/SFTPtransportDataToCluster/"/>
+        <processorBinding rdf:resource="processorbinding/SFTPtransportMetadataAndResultsToLocal/"/>
+        <activateConfiguration rdf:resource="configuration/3DReconstructionApplication/"/>
+        <activateConfiguration rdf:resource="configuration/3DReconstructionApplication-proc/"/>
+        <activateConfiguration rdf:resource="configuration/AvarageTimeMatcher/"/>
+        <activateConfiguration rdf:resource="configuration/AvarageTimeMatcher-proc/"/>
+        <activateConfiguration rdf:resource="configuration/AvarageTimeSIFT/"/>
+        <activateConfiguration rdf:resource="configuration/AvarageTimeSIFT-proc/"/>
+        <activateConfiguration rdf:resource="configuration/AvarageTimeTracker/"/>
+        <activateConfiguration rdf:resource="configuration/AvarageTimeTracker-proc/"/>
+        <activateConfiguration rdf:resource="configuration/SFTPtransportDataToCluster/"/>
+        <activateConfiguration rdf:resource="configuration/SFTPtransportDataToCluster-proc/"/>
+        <activateConfiguration rdf:resource="configuration/SFTPtransportMetadataAndResultsToLocal/"/>
+        <activateConfiguration rdf:resource="configuration/SFTPtransportMetadataAndResultsToLocal-proc/"/>
+    </Profile>
+    <Activity rdf:about="activity/3DReconstructionApplication/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/tool"/>
+        <name>3DReconstructionApplication</name>
+        <inputActivityPort>
+            <InputActivityPort rdf:about="activity/3DReconstructionApplication/in/CoresPerNode">
+                <name>CoresPerNode</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+            </InputActivityPort>
+        </inputActivityPort>
+        <inputActivityPort>
+            <InputActivityPort rdf:about="activity/3DReconstructionApplication/in/Nodes">
+                <name>Nodes</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+            </InputActivityPort>
+        </inputActivityPort>
+        <inputActivityPort>
+            <InputActivityPort rdf:about="activity/3DReconstructionApplication/in/dataSetPath">
+                <name>dataSetPath</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+            </InputActivityPort>
+        </inputActivityPort>
+        <outputActivityPort>
+            <OutputActivityPort rdf:about="activity/3DReconstructionApplication/out/STDOUT">
+                <name>STDOUT</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+            </OutputActivityPort>
+        </outputActivityPort>
+        <outputActivityPort>
+            <OutputActivityPort rdf:about="activity/3DReconstructionApplication/out/metadataPath">
+                <name>metadataPath</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+            </OutputActivityPort>
+        </outputActivityPort>
+    </Activity>
+    <Activity rdf:about="activity/AvarageTimeMatcher/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/tool"/>
+        <name>AvarageTimeMatcher</name>
+        <inputActivityPort>
+            <InputActivityPort rdf:about="activity/AvarageTimeMatcher/in/experimentMetadataPath">
+                <name>experimentMetadataPath</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+            </InputActivityPort>
+        </inputActivityPort>
+        <outputActivityPort>
+            <OutputActivityPort rdf:about="activity/AvarageTimeMatcher/out/hadoopResults2">
+                <name>hadoopResults2</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+            </OutputActivityPort>
+        </outputActivityPort>
+    </Activity>
+    <Activity rdf:about="activity/AvarageTimeSIFT/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/tool"/>
+        <name>AvarageTimeSIFT</name>
+        <inputActivityPort>
+            <InputActivityPort rdf:about="activity/AvarageTimeSIFT/in/experimentMetadataPath">
+                <name>experimentMetadataPath</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+            </InputActivityPort>
+        </inputActivityPort>
+        <outputActivityPort>
+            <OutputActivityPort rdf:about="activity/AvarageTimeSIFT/out/hadoopResult1">
+                <name>hadoopResult1</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+            </OutputActivityPort>
+        </outputActivityPort>
+    </Activity>
+    <Activity rdf:about="activity/AvarageTimeTracker/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/tool"/>
+        <name>AvarageTimeTracker</name>
+        <inputActivityPort>
+            <InputActivityPort rdf:about="activity/AvarageTimeTracker/in/experimentMetadataPath">
+                <name>experimentMetadataPath</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+            </InputActivityPort>
+        </inputActivityPort>
+        <outputActivityPort>
+            <OutputActivityPort rdf:about="activity/AvarageTimeTracker/out/hadoopResults2">
+                <name>hadoopResults2</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+            </OutputActivityPort>
+        </outputActivityPort>
+    </Activity>
+    <Activity rdf:about="activity/SFTPtransportDataToCluster/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/tool"/>
+        <name>SFTPtransportDataToCluster</name>
+        <inputActivityPort>
+            <InputActivityPort rdf:about="activity/SFTPtransportDataToCluster/in/sftpInput">
+                <name>sftpInput</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+            </InputActivityPort>
+        </inputActivityPort>
+        <outputActivityPort>
+            <OutputActivityPort rdf:about="activity/SFTPtransportDataToCluster/out/clusterDataSetPath">
+                <name>clusterDataSetPath</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+            </OutputActivityPort>
+        </outputActivityPort>
+    </Activity>
+    <Activity rdf:about="activity/SFTPtransportMetadataAndResultsToLocal/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/tool"/>
+        <name>SFTPtransportMetadataAndResultsToLocal</name>
+        <inputActivityPort>
+            <InputActivityPort rdf:about="activity/SFTPtransportMetadataAndResultsToLocal/in/ftpsIn">
+                <name>ftpsIn</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+            </InputActivityPort>
+        </inputActivityPort>
+        <outputActivityPort>
+            <OutputActivityPort rdf:about="activity/SFTPtransportMetadataAndResultsToLocal/out/localResultsPath">
+                <name>localResultsPath</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+            </OutputActivityPort>
+        </outputActivityPort>
+    </Activity>
+    <ProcessorBinding rdf:about="processorbinding/3DReconstructionApplication/">
+        <name>3DReconstructionApplication</name>
+        <bindActivity rdf:resource="activity/3DReconstructionApplication/"/>
+        <bindProcessor rdf:resource="../../workflow/Workflow1/processor/3DReconstructionApplication/"/>
+        <activityPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</activityPosition>
+        <inputPortBinding>
+            <InputPortBinding rdf:about="processorbinding/3DReconstructionApplication/in/Nodes">
+                <bindInputActivityPort rdf:resource="activity/3DReconstructionApplication/in/Nodes"/>
+                <bindInputProcessorPort rdf:resource="../../workflow/Workflow1/processor/3DReconstructionApplication/in/Nodes"/>
+            </InputPortBinding>
+        </inputPortBinding>
+        <inputPortBinding>
+            <InputPortBinding rdf:about="processorbinding/3DReconstructionApplication/in/CoresPerNode">
+                <bindInputActivityPort rdf:resource="activity/3DReconstructionApplication/in/CoresPerNode"/>
+                <bindInputProcessorPort rdf:resource="../../workflow/Workflow1/processor/3DReconstructionApplication/in/CoresPerNode"/>
+            </InputPortBinding>
+        </inputPortBinding>
+        <inputPortBinding>
+            <InputPortBinding rdf:about="processorbinding/3DReconstructionApplication/in/dataSetPath">
+                <bindInputActivityPort rdf:resource="activity/3DReconstructionApplication/in/dataSetPath"/>
+                <bindInputProcessorPort rdf:resource="../../workflow/Workflow1/processor/3DReconstructionApplication/in/dataSetPath"/>
+            </InputPortBinding>
+        </inputPortBinding>
+        <outputPortBinding>
+            <OutputPortBinding rdf:about="processorbinding/3DReconstructionApplication/out/STDOUT">
+                <bindOutputActivityPort rdf:resource="activity/3DReconstructionApplication/out/STDOUT"/>
+                <bindOutputProcessorPort rdf:resource="../../workflow/Workflow1/processor/3DReconstructionApplication/out/STDOUT"/>
+            </OutputPortBinding>
+        </outputPortBinding>
+        <outputPortBinding>
+            <OutputPortBinding rdf:about="processorbinding/3DReconstructionApplication/out/metadataPath">
+                <bindOutputActivityPort rdf:resource="activity/3DReconstructionApplication/out/metadataPath"/>
+                <bindOutputProcessorPort rdf:resource="../../workflow/Workflow1/processor/3DReconstructionApplication/out/metadataPath"/>
+            </OutputPortBinding>
+        </outputPortBinding>
+    </ProcessorBinding>
+    <ProcessorBinding rdf:about="processorbinding/AvarageTimeMatcher/">
+        <name>AvarageTimeMatcher</name>
+        <bindActivity rdf:resource="activity/AvarageTimeMatcher/"/>
+        <bindProcessor rdf:resource="../../workflow/Workflow1/processor/AvarageTimeMatcher/"/>
+        <activityPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</activityPosition>
+        <inputPortBinding>
+            <InputPortBinding rdf:about="processorbinding/AvarageTimeMatcher/in/experimentMetadataPath">
+                <bindInputActivityPort rdf:resource="activity/AvarageTimeMatcher/in/experimentMetadataPath"/>
+                <bindInputProcessorPort rdf:resource="../../workflow/Workflow1/processor/AvarageTimeMatcher/in/experimentMetadataPath"/>
+            </InputPortBinding>
+        </inputPortBinding>
+        <outputPortBinding>
+            <OutputPortBinding rdf:about="processorbinding/AvarageTimeMatcher/out/hadoopResults2">
+                <bindOutputActivityPort rdf:resource="activity/AvarageTimeMatcher/out/hadoopResults2"/>
+                <bindOutputProcessorPort rdf:resource="../../workflow/Workflow1/processor/AvarageTimeMatcher/out/hadoopResults2"/>
+            </OutputPortBinding>
+        </outputPortBinding>
+    </ProcessorBinding>
+    <ProcessorBinding rdf:about="processorbinding/AvarageTimeSIFT/">
+        <name>AvarageTimeSIFT</name>
+        <bindActivity rdf:resource="activity/AvarageTimeSIFT/"/>
+        <bindProcessor rdf:resource="../../workflow/Workflow1/processor/AvarageTimeSIFT/"/>
+        <activityPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</activityPosition>
+        <inputPortBinding>
+            <InputPortBinding rdf:about="processorbinding/AvarageTimeSIFT/in/experimentMetadataPath">
+                <bindInputActivityPort rdf:resource="activity/AvarageTimeSIFT/in/experimentMetadataPath"/>
+                <bindInputProcessorPort rdf:resource="../../workflow/Workflow1/processor/AvarageTimeSIFT/in/experimentMetadataPath"/>
+            </InputPortBinding>
+        </inputPortBinding>
+        <outputPortBinding>
+            <OutputPortBinding rdf:about="processorbinding/AvarageTimeSIFT/out/hadoopResult1">
+                <bindOutputActivityPort rdf:resource="activity/AvarageTimeSIFT/out/hadoopResult1"/>
+                <bindOutputProcessorPort rdf:resource="../../workflow/Workflow1/processor/AvarageTimeSIFT/out/hadoopResult1"/>
+            </OutputPortBinding>
+        </outputPortBinding>
+    </ProcessorBinding>
+    <ProcessorBinding rdf:about="processorbinding/AvarageTimeTracker/">
+        <name>AvarageTimeTracker</name>
+        <bindActivity rdf:resource="activity/AvarageTimeTracker/"/>
+        <bindProcessor rdf:resource="../../workflow/Workflow1/processor/AvarageTimeTracker/"/>
+        <activityPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</activityPosition>
+        <inputPortBinding>
+            <InputPortBinding rdf:about="processorbinding/AvarageTimeTracker/in/experimentMetadataPath">
+                <bindInputActivityPort rdf:resource="activity/AvarageTimeTracker/in/experimentMetadataPath"/>
+                <bindInputProcessorPort rdf:resource="../../workflow/Workflow1/processor/AvarageTimeTracker/in/experimentMetadataPath"/>
+            </InputPortBinding>
+        </inputPortBinding>
+        <outputPortBinding>
+            <OutputPortBinding rdf:about="processorbinding/AvarageTimeTracker/out/hadoopResults2">
+                <bindOutputActivityPort rdf:resource="activity/AvarageTimeTracker/out/hadoopResults2"/>
+                <bindOutputProcessorPort rdf:resource="../../workflow/Workflow1/processor/AvarageTimeTracker/out/hadoopResults2"/>
+            </OutputPortBinding>
+        </outputPortBinding>
+    </ProcessorBinding>
+    <ProcessorBinding rdf:about="processorbinding/SFTPtransportDataToCluster/">
+        <name>SFTPtransportDataToCluster</name>
+        <bindActivity rdf:resource="activity/SFTPtransportDataToCluster/"/>
+        <bindProcessor rdf:resource="../../workflow/Workflow1/processor/SFTPtransportDataToCluster/"/>
+        <activityPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</activityPosition>
+        <inputPortBinding>
+            <InputPortBinding rdf:about="processorbinding/SFTPtransportDataToCluster/in/sftpInput">
+                <bindInputActivityPort rdf:resource="activity/SFTPtransportDataToCluster/in/sftpInput"/>
+                <bindInputProcessorPort rdf:resource="../../workflow/Workflow1/processor/SFTPtransportDataToCluster/in/sftpInput"/>
+            </InputPortBinding>
+        </inputPortBinding>
+        <outputPortBinding>
+            <OutputPortBinding rdf:about="processorbinding/SFTPtransportDataToCluster/out/clusterDataSetPath">
+                <bindOutputActivityPort rdf:resource="activity/SFTPtransportDataToCluster/out/clusterDataSetPath"/>
+                <bindOutputProcessorPort rdf:resource="../../workflow/Workflow1/processor/SFTPtransportDataToCluster/out/clusterDataSetPath"/>
+            </OutputPortBinding>
+        </outputPortBinding>
+    </ProcessorBinding>
+    <ProcessorBinding rdf:about="processorbinding/SFTPtransportMetadataAndResultsToLocal/">
+        <name>SFTPtransportMetadataAndResultsToLocal</name>
+        <bindActivity rdf:resource="activity/SFTPtransportMetadataAndResultsToLocal/"/>
+        <bindProcessor rdf:resource="../../workflow/Workflow1/processor/SFTPtransportMetadataAndResultsToLocal/"/>
+        <activityPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</activityPosition>
+        <inputPortBinding>
+            <InputPortBinding rdf:about="processorbinding/SFTPtransportMetadataAndResultsToLocal/in/ftpsIn">
+                <bindInputActivityPort rdf:resource="activity/SFTPtransportMetadataAndResultsToLocal/in/ftpsIn"/>
+                <bindInputProcessorPort rdf:resource="../../workflow/Workflow1/processor/SFTPtransportMetadataAndResultsToLocal/in/ftpsIn"/>
+            </InputPortBinding>
+        </inputPortBinding>
+        <outputPortBinding>
+            <OutputPortBinding rdf:about="processorbinding/SFTPtransportMetadataAndResultsToLocal/out/localResultsPath">
+                <bindOutputActivityPort rdf:resource="activity/SFTPtransportMetadataAndResultsToLocal/out/localResultsPath"/>
+                <bindOutputProcessorPort rdf:resource="../../workflow/Workflow1/processor/SFTPtransportMetadataAndResultsToLocal/out/localResultsPath"/>
+            </OutputPortBinding>
+        </outputPortBinding>
+    </ProcessorBinding>
+    <Configuration rdf:about="configuration/3DReconstructionApplication/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/tool#Config"/>
+        <rdfs:seeAlso rdf:resource="configuration/3DReconstructionApplication.json"/>
+        <name>3DReconstructionApplication</name>
+        <configure rdf:resource="activity/3DReconstructionApplication/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/3DReconstructionApplication-proc/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/scufl2#ProcessorConfig"/>
+        <rdfs:seeAlso rdf:resource="configuration/3DReconstructionApplication-proc.json"/>
+        <name>3DReconstructionApplication-proc</name>
+        <configure rdf:resource="../../workflow/Workflow1/processor/3DReconstructionApplication/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/AvarageTimeMatcher/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/tool#Config"/>
+        <rdfs:seeAlso rdf:resource="configuration/AvarageTimeMatcher.json"/>
+        <name>AvarageTimeMatcher</name>
+        <configure rdf:resource="activity/AvarageTimeMatcher/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/AvarageTimeMatcher-proc/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/scufl2#ProcessorConfig"/>
+        <rdfs:seeAlso rdf:resource="configuration/AvarageTimeMatcher-proc.json"/>
+        <name>AvarageTimeMatcher-proc</name>
+        <configure rdf:resource="../../workflow/Workflow1/processor/AvarageTimeMatcher/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/AvarageTimeSIFT/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/tool#Config"/>
+        <rdfs:seeAlso rdf:resource="configuration/AvarageTimeSIFT.json"/>
+        <name>AvarageTimeSIFT</name>
+        <configure rdf:resource="activity/AvarageTimeSIFT/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/AvarageTimeSIFT-proc/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/scufl2#ProcessorConfig"/>
+        <rdfs:seeAlso rdf:resource="configuration/AvarageTimeSIFT-proc.json"/>
+        <name>AvarageTimeSIFT-proc</name>
+        <configure rdf:resource="../../workflow/Workflow1/processor/AvarageTimeSIFT/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/AvarageTimeTracker/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/tool#Config"/>
+        <rdfs:seeAlso rdf:resource="configuration/AvarageTimeTracker.json"/>
+        <name>AvarageTimeTracker</name>
+        <configure rdf:resource="activity/AvarageTimeTracker/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/AvarageTimeTracker-proc/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/scufl2#ProcessorConfig"/>
+        <rdfs:seeAlso rdf:resource="configuration/AvarageTimeTracker-proc.json"/>
+        <name>AvarageTimeTracker-proc</name>
+        <configure rdf:resource="../../workflow/Workflow1/processor/AvarageTimeTracker/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/SFTPtransportDataToCluster/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/tool#Config"/>
+        <rdfs:seeAlso rdf:resource="configuration/SFTPtransportDataToCluster.json"/>
+        <name>SFTPtransportDataToCluster</name>
+        <configure rdf:resource="activity/SFTPtransportDataToCluster/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/SFTPtransportDataToCluster-proc/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/scufl2#ProcessorConfig"/>
+        <rdfs:seeAlso rdf:resource="configuration/SFTPtransportDataToCluster-proc.json"/>
+        <name>SFTPtransportDataToCluster-proc</name>
+        <configure rdf:resource="../../workflow/Workflow1/processor/SFTPtransportDataToCluster/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/SFTPtransportMetadataAndResultsToLocal/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/tool#Config"/>
+        <rdfs:seeAlso rdf:resource="configuration/SFTPtransportMetadataAndResultsToLocal.json"/>
+        <name>SFTPtransportMetadataAndResultsToLocal</name>
+        <configure rdf:resource="activity/SFTPtransportMetadataAndResultsToLocal/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/SFTPtransportMetadataAndResultsToLocal-proc/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/scufl2#ProcessorConfig"/>
+        <rdfs:seeAlso rdf:resource="configuration/SFTPtransportMetadataAndResultsToLocal-proc.json"/>
+        <name>SFTPtransportMetadataAndResultsToLocal-proc</name>
+        <configure rdf:resource="../../workflow/Workflow1/processor/SFTPtransportMetadataAndResultsToLocal/"/>
+    </Configuration>
+</rdf:RDF>

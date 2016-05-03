@@ -1,0 +1,1 @@
+<../workflow/Workflow1/processor/AvarageTimeSIFT/> <http://purl.org/dc/terms/description> """Hadoop application analysing saved metadata, just extracting some particular information about environment etc. wrt AnalyseParameter1, for example list of results which were processed longer than 1 minute.""" .

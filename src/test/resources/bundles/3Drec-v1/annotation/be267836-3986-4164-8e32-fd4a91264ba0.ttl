@@ -1,0 +1,1 @@
+<../workflow/Workflow1/in/Nodes> <http://purl.org/dc/terms/description> """Some input parameter for our experimental MPI application for video content analysing.""" .

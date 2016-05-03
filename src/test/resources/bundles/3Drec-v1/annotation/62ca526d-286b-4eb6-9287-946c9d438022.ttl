@@ -1,0 +1,1 @@
+<../workflow/Workflow1/in/DataSetPath> <http://biocatalogue.org/attribute/exampleData> """C:\\SCAPE\\dataset""" .

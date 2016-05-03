@@ -1,0 +1,1 @@
+<../workflow/Workflow1/out/ExperimentResultsAndMetadata> <http://purl.org/dc/terms/description> """Metadata and results of experiment and results of hadoop analysis.""" .

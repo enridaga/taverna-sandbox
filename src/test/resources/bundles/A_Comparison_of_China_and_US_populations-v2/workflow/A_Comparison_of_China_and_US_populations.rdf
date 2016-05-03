@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://ns.taverna.org.uk/2010/scufl2#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="WorkflowDocument" xml:base="A_Comparison_of_China_and_US_populations/" xsi:schemaLocation="http://ns.taverna.org.uk/2010/scufl2# http://ns.taverna.org.uk/2010/scufl2/scufl2.xsd http://www.w3.org/1999/02/22-rdf-syntax-ns# http://ns.taverna.org.uk/2010/scufl2/rdf.xsd">
+    <Workflow rdf:about="">
+        <name>A_Comparison_of_China_and_US_populations</name>
+        <workflowIdentifier rdf:resource="http://ns.taverna.org.uk/2010/workflow/f93f1bd9-24d5-40ce-b274-0e272e1f427c/"/>
+        <outputWorkflowPort>
+            <OutputWorkflowPort rdf:about="out/China_Pop_1975_to_2020_at_15">
+                <name>China_Pop_1975_to_2020_at_15</name>
+            </OutputWorkflowPort>
+        </outputWorkflowPort>
+        <outputWorkflowPort>
+            <OutputWorkflowPort rdf:about="out/US_Pop_1975_to_2020_at_15">
+                <name>US_Pop_1975_to_2020_at_15</name>
+            </OutputWorkflowPort>
+        </outputWorkflowPort>
+        <outputWorkflowPort>
+            <OutputWorkflowPort rdf:about="out/US_Pop_1975_to_2020_at_5">
+                <name>US_Pop_1975_to_2020_at_5</name>
+            </OutputWorkflowPort>
+        </outputWorkflowPort>
+        <processor>
+            <Processor rdf:about="processor/China_Pop_at_15_URL/">
+                <name>China_Pop_at_15_URL</name>
+                <outputProcessorPort>
+                    <OutputProcessorPort rdf:about="processor/China_Pop_at_15_URL/out/value">
+                        <name>value</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                        <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+                    </OutputProcessorPort>
+                </outputProcessorPort>
+                <iterationStrategyStack>
+                    <IterationStrategyStack rdf:about="processor/China_Pop_at_15_URL/iterationstrategy/"/>
+                </iterationStrategyStack>
+            </Processor>
+        </processor>
+        <processor>
+            <Processor rdf:about="processor/Get_China_Pop_15_Image/">
+                <name>Get_China_Pop_15_Image</name>
+                <inputProcessorPort>
+                    <InputProcessorPort rdf:about="processor/Get_China_Pop_15_Image/in/url">
+                        <name>url</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                    </InputProcessorPort>
+                </inputProcessorPort>
+                <outputProcessorPort>
+                    <OutputProcessorPort rdf:about="processor/Get_China_Pop_15_Image/out/image">
+                        <name>image</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                        <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+                    </OutputProcessorPort>
+                </outputProcessorPort>
+                <iterationStrategyStack>
+                    <IterationStrategyStack rdf:about="processor/Get_China_Pop_15_Image/iterationstrategy/">
+                        <iterationStrategies rdf:parseType="Collection">
+                            <CrossProduct rdf:about="processor/Get_China_Pop_15_Image/iterationstrategy/0/">
+<productOf rdf:parseType="Collection">
+    <PortNode rdf:about="processor/Get_China_Pop_15_Image/iterationstrategy/0/0/">
+        <iterateOverInputPort rdf:resource="processor/Get_China_Pop_15_Image/in/url"/>
+        <desiredDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</desiredDepth>
+    </PortNode>
+</productOf>
+                            </CrossProduct>
+                        </iterationStrategies>
+                    </IterationStrategyStack>
+                </iterationStrategyStack>
+            </Processor>
+        </processor>
+        <processor>
+            <Processor rdf:about="processor/Get_US_Pop_15_Image/">
+                <name>Get_US_Pop_15_Image</name>
+                <inputProcessorPort>
+                    <InputProcessorPort rdf:about="processor/Get_US_Pop_15_Image/in/url">
+                        <name>url</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                    </InputProcessorPort>
+                </inputProcessorPort>
+                <outputProcessorPort>
+                    <OutputProcessorPort rdf:about="processor/Get_US_Pop_15_Image/out/image">
+                        <name>image</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                        <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+                    </OutputProcessorPort>
+                </outputProcessorPort>
+                <iterationStrategyStack>
+                    <IterationStrategyStack rdf:about="processor/Get_US_Pop_15_Image/iterationstrategy/">
+                        <iterationStrategies rdf:parseType="Collection">
+                            <CrossProduct rdf:about="processor/Get_US_Pop_15_Image/iterationstrategy/0/">
+<productOf rdf:parseType="Collection">
+    <PortNode rdf:about="processor/Get_US_Pop_15_Image/iterationstrategy/0/0/">
+        <iterateOverInputPort rdf:resource="processor/Get_US_Pop_15_Image/in/url"/>
+        <desiredDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</desiredDepth>
+    </PortNode>
+</productOf>
+                            </CrossProduct>
+                        </iterationStrategies>
+                    </IterationStrategyStack>
+                </iterationStrategyStack>
+            </Processor>
+        </processor>
+        <processor>
+            <Processor rdf:about="processor/Get_US_Pop_5_Image/">
+                <name>Get_US_Pop_5_Image</name>
+                <inputProcessorPort>
+                    <InputProcessorPort rdf:about="processor/Get_US_Pop_5_Image/in/url">
+                        <name>url</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                    </InputProcessorPort>
+                </inputProcessorPort>
+                <outputProcessorPort>
+                    <OutputProcessorPort rdf:about="processor/Get_US_Pop_5_Image/out/image">
+                        <name>image</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                        <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+                    </OutputProcessorPort>
+                </outputProcessorPort>
+                <iterationStrategyStack>
+                    <IterationStrategyStack rdf:about="processor/Get_US_Pop_5_Image/iterationstrategy/">
+                        <iterationStrategies rdf:parseType="Collection">
+                            <CrossProduct rdf:about="processor/Get_US_Pop_5_Image/iterationstrategy/0/">
+<productOf rdf:parseType="Collection">
+    <PortNode rdf:about="processor/Get_US_Pop_5_Image/iterationstrategy/0/0/">
+        <iterateOverInputPort rdf:resource="processor/Get_US_Pop_5_Image/in/url"/>
+        <desiredDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</desiredDepth>
+    </PortNode>
+</productOf>
+                            </CrossProduct>
+                        </iterationStrategies>
+                    </IterationStrategyStack>
+                </iterationStrategyStack>
+            </Processor>
+        </processor>
+        <processor>
+            <Processor rdf:about="processor/US_Pop_at_15_URL/">
+                <name>US_Pop_at_15_URL</name>
+                <outputProcessorPort>
+                    <OutputProcessorPort rdf:about="processor/US_Pop_at_15_URL/out/value">
+                        <name>value</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                        <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+                    </OutputProcessorPort>
+                </outputProcessorPort>
+                <iterationStrategyStack>
+                    <IterationStrategyStack rdf:about="processor/US_Pop_at_15_URL/iterationstrategy/"/>
+                </iterationStrategyStack>
+            </Processor>
+        </processor>
+        <processor>
+            <Processor rdf:about="processor/US_Pop_at_5_URL/">
+                <name>US_Pop_at_5_URL</name>
+                <outputProcessorPort>
+                    <OutputProcessorPort rdf:about="processor/US_Pop_at_5_URL/out/value">
+                        <name>value</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                        <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+                    </OutputProcessorPort>
+                </outputProcessorPort>
+                <iterationStrategyStack>
+                    <IterationStrategyStack rdf:about="processor/US_Pop_at_5_URL/iterationstrategy/"/>
+                </iterationStrategyStack>
+            </Processor>
+        </processor>
+        <datalink>
+            <DataLink rdf:about="datalink?from=processor/China_Pop_at_15_URL/out/value&amp;to=processor/Get_China_Pop_15_Image/in/url">
+                <receiveFrom rdf:resource="processor/China_Pop_at_15_URL/out/value"/>
+                <sendTo rdf:resource="processor/Get_China_Pop_15_Image/in/url"/>
+            </DataLink>
+        </datalink>
+        <datalink>
+            <DataLink rdf:about="datalink?from=processor/Get_China_Pop_15_Image/out/image&amp;to=out/China_Pop_1975_to_2020_at_15">
+                <receiveFrom rdf:resource="processor/Get_China_Pop_15_Image/out/image"/>
+                <sendTo rdf:resource="out/China_Pop_1975_to_2020_at_15"/>
+            </DataLink>
+        </datalink>
+        <datalink>
+            <DataLink rdf:about="datalink?from=processor/Get_US_Pop_15_Image/out/image&amp;to=out/US_Pop_1975_to_2020_at_15">
+                <receiveFrom rdf:resource="processor/Get_US_Pop_15_Image/out/image"/>
+                <sendTo rdf:resource="out/US_Pop_1975_to_2020_at_15"/>
+            </DataLink>
+        </datalink>
+        <datalink>
+            <DataLink rdf:about="datalink?from=processor/Get_US_Pop_5_Image/out/image&amp;to=out/US_Pop_1975_to_2020_at_5">
+                <receiveFrom rdf:resource="processor/Get_US_Pop_5_Image/out/image"/>
+                <sendTo rdf:resource="out/US_Pop_1975_to_2020_at_5"/>
+            </DataLink>
+        </datalink>
+        <datalink>
+            <DataLink rdf:about="datalink?from=processor/US_Pop_at_15_URL/out/value&amp;to=processor/Get_US_Pop_15_Image/in/url">
+                <receiveFrom rdf:resource="processor/US_Pop_at_15_URL/out/value"/>
+                <sendTo rdf:resource="processor/Get_US_Pop_15_Image/in/url"/>
+            </DataLink>
+        </datalink>
+        <datalink>
+            <DataLink rdf:about="datalink?from=processor/US_Pop_at_5_URL/out/value&amp;to=processor/Get_US_Pop_5_Image/in/url">
+                <receiveFrom rdf:resource="processor/US_Pop_at_5_URL/out/value"/>
+                <sendTo rdf:resource="processor/Get_US_Pop_5_Image/in/url"/>
+            </DataLink>
+        </datalink>
+    </Workflow>
+</rdf:RDF>

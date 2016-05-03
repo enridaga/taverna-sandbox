@@ -1,0 +1,1 @@
+<../workflow/Workflow1/in/DataSetPath> <http://purl.org/dc/terms/description> """Path to local data set directory on BUT local machine.""" .

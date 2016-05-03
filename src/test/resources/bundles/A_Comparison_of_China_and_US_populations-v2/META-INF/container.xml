@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<container xmlns:manifest="urn:oasis:names:tc:opendocument:xmlns:manifest:1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:enc="http://www.w3.org/2001/04/xmlenc#">
+    <rootFiles>
+        <rootFile full-path="workflowBundle.rdf" media-type="application/rdf+xml"/>
+    </rootFiles>
+</container>

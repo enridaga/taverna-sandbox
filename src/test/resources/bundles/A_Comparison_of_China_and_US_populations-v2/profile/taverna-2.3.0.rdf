@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://ns.taverna.org.uk/2010/scufl2#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProfileDocument" xml:base="taverna-2.3.0/" xsi:schemaLocation="http://ns.taverna.org.uk/2010/scufl2# http://ns.taverna.org.uk/2010/scufl2/scufl2.xsd http://www.w3.org/1999/02/22-rdf-syntax-ns# http://ns.taverna.org.uk/2010/scufl2/rdf.xsd">
+    <Profile rdf:about="">
+        <name>taverna-2.3.0</name>
+        <processorBinding rdf:resource="processorbinding/China_Pop_at_15_URL/"/>
+        <processorBinding rdf:resource="processorbinding/Get_China_Pop_15_Image/"/>
+        <processorBinding rdf:resource="processorbinding/Get_US_Pop_15_Image/"/>
+        <processorBinding rdf:resource="processorbinding/Get_US_Pop_5_Image/"/>
+        <processorBinding rdf:resource="processorbinding/US_Pop_at_15_URL/"/>
+        <processorBinding rdf:resource="processorbinding/US_Pop_at_5_URL/"/>
+        <activateConfiguration rdf:resource="configuration/China_Pop_at_15_URL/"/>
+        <activateConfiguration rdf:resource="configuration/China_Pop_at_15_URL-proc/"/>
+        <activateConfiguration rdf:resource="configuration/Get_China_Pop_15_Image/"/>
+        <activateConfiguration rdf:resource="configuration/Get_China_Pop_15_Image-proc/"/>
+        <activateConfiguration rdf:resource="configuration/Get_US_Pop_15_Image/"/>
+        <activateConfiguration rdf:resource="configuration/Get_US_Pop_15_Image-proc/"/>
+        <activateConfiguration rdf:resource="configuration/Get_US_Pop_5_Image/"/>
+        <activateConfiguration rdf:resource="configuration/Get_US_Pop_5_Image-proc/"/>
+        <activateConfiguration rdf:resource="configuration/US_Pop_at_15_URL/"/>
+        <activateConfiguration rdf:resource="configuration/US_Pop_at_15_URL-proc/"/>
+        <activateConfiguration rdf:resource="configuration/US_Pop_at_5_URL/"/>
+        <activateConfiguration rdf:resource="configuration/US_Pop_at_5_URL-proc/"/>
+    </Profile>
+    <Activity rdf:about="activity/China_Pop_at_15_URL/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/constant"/>
+        <name>China_Pop_at_15_URL</name>
+        <outputActivityPort>
+            <OutputActivityPort rdf:about="activity/China_Pop_at_15_URL/out/value">
+                <name>value</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+            </OutputActivityPort>
+        </outputActivityPort>
+    </Activity>
+    <Activity rdf:about="activity/Get_China_Pop_15_Image/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/beanshell"/>
+        <name>Get_China_Pop_15_Image</name>
+        <inputActivityPort>
+            <InputActivityPort rdf:about="activity/Get_China_Pop_15_Image/in/base">
+                <name>base</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+            </InputActivityPort>
+        </inputActivityPort>
+        <inputActivityPort>
+            <InputActivityPort rdf:about="activity/Get_China_Pop_15_Image/in/url">
+                <name>url</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+            </InputActivityPort>
+        </inputActivityPort>
+        <outputActivityPort>
+            <OutputActivityPort rdf:about="activity/Get_China_Pop_15_Image/out/image">
+                <name>image</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+            </OutputActivityPort>
+        </outputActivityPort>
+    </Activity>
+    <Activity rdf:about="activity/Get_US_Pop_15_Image/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/beanshell"/>
+        <name>Get_US_Pop_15_Image</name>
+        <inputActivityPort>
+            <InputActivityPort rdf:about="activity/Get_US_Pop_15_Image/in/base">
+                <name>base</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+            </InputActivityPort>
+        </inputActivityPort>
+        <inputActivityPort>
+            <InputActivityPort rdf:about="activity/Get_US_Pop_15_Image/in/url">
+                <name>url</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+            </InputActivityPort>
+        </inputActivityPort>
+        <outputActivityPort>
+            <OutputActivityPort rdf:about="activity/Get_US_Pop_15_Image/out/image">
+                <name>image</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+            </OutputActivityPort>
+        </outputActivityPort>
+    </Activity>
+    <Activity rdf:about="activity/Get_US_Pop_5_Image/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/beanshell"/>
+        <name>Get_US_Pop_5_Image</name>
+        <inputActivityPort>
+            <InputActivityPort rdf:about="activity/Get_US_Pop_5_Image/in/base">
+                <name>base</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+            </InputActivityPort>
+        </inputActivityPort>
+        <inputActivityPort>
+            <InputActivityPort rdf:about="activity/Get_US_Pop_5_Image/in/url">
+                <name>url</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+            </InputActivityPort>
+        </inputActivityPort>
+        <outputActivityPort>
+            <OutputActivityPort rdf:about="activity/Get_US_Pop_5_Image/out/image">
+                <name>image</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+            </OutputActivityPort>
+        </outputActivityPort>
+    </Activity>
+    <Activity rdf:about="activity/US_Pop_at_15_URL/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/constant"/>
+        <name>US_Pop_at_15_URL</name>
+        <outputActivityPort>
+            <OutputActivityPort rdf:about="activity/US_Pop_at_15_URL/out/value">
+                <name>value</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+            </OutputActivityPort>
+        </outputActivityPort>
+    </Activity>
+    <Activity rdf:about="activity/US_Pop_at_5_URL/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/constant"/>
+        <name>US_Pop_at_5_URL</name>
+        <outputActivityPort>
+            <OutputActivityPort rdf:about="activity/US_Pop_at_5_URL/out/value">
+                <name>value</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+            </OutputActivityPort>
+        </outputActivityPort>
+    </Activity>
+    <ProcessorBinding rdf:about="processorbinding/China_Pop_at_15_URL/">
+        <name>China_Pop_at_15_URL</name>
+        <bindActivity rdf:resource="activity/China_Pop_at_15_URL/"/>
+        <bindProcessor rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/China_Pop_at_15_URL/"/>
+        <activityPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</activityPosition>
+        <outputPortBinding>
+            <OutputPortBinding rdf:about="processorbinding/China_Pop_at_15_URL/out/value">
+                <bindOutputActivityPort rdf:resource="activity/China_Pop_at_15_URL/out/value"/>
+                <bindOutputProcessorPort rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/China_Pop_at_15_URL/out/value"/>
+            </OutputPortBinding>
+        </outputPortBinding>
+    </ProcessorBinding>
+    <ProcessorBinding rdf:about="processorbinding/Get_China_Pop_15_Image/">
+        <name>Get_China_Pop_15_Image</name>
+        <bindActivity rdf:resource="activity/Get_China_Pop_15_Image/"/>
+        <bindProcessor rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/Get_China_Pop_15_Image/"/>
+        <activityPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</activityPosition>
+        <inputPortBinding>
+            <InputPortBinding rdf:about="processorbinding/Get_China_Pop_15_Image/in/url">
+                <bindInputActivityPort rdf:resource="activity/Get_China_Pop_15_Image/in/url"/>
+                <bindInputProcessorPort rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/Get_China_Pop_15_Image/in/url"/>
+            </InputPortBinding>
+        </inputPortBinding>
+        <outputPortBinding>
+            <OutputPortBinding rdf:about="processorbinding/Get_China_Pop_15_Image/out/image">
+                <bindOutputActivityPort rdf:resource="activity/Get_China_Pop_15_Image/out/image"/>
+                <bindOutputProcessorPort rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/Get_China_Pop_15_Image/out/image"/>
+            </OutputPortBinding>
+        </outputPortBinding>
+    </ProcessorBinding>
+    <ProcessorBinding rdf:about="processorbinding/Get_US_Pop_15_Image/">
+        <name>Get_US_Pop_15_Image</name>
+        <bindActivity rdf:resource="activity/Get_US_Pop_15_Image/"/>
+        <bindProcessor rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/Get_US_Pop_15_Image/"/>
+        <activityPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</activityPosition>
+        <inputPortBinding>
+            <InputPortBinding rdf:about="processorbinding/Get_US_Pop_15_Image/in/url">
+                <bindInputActivityPort rdf:resource="activity/Get_US_Pop_15_Image/in/url"/>
+                <bindInputProcessorPort rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/Get_US_Pop_15_Image/in/url"/>
+            </InputPortBinding>
+        </inputPortBinding>
+        <outputPortBinding>
+            <OutputPortBinding rdf:about="processorbinding/Get_US_Pop_15_Image/out/image">
+                <bindOutputActivityPort rdf:resource="activity/Get_US_Pop_15_Image/out/image"/>
+                <bindOutputProcessorPort rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/Get_US_Pop_15_Image/out/image"/>
+            </OutputPortBinding>
+        </outputPortBinding>
+    </ProcessorBinding>
+    <ProcessorBinding rdf:about="processorbinding/Get_US_Pop_5_Image/">
+        <name>Get_US_Pop_5_Image</name>
+        <bindActivity rdf:resource="activity/Get_US_Pop_5_Image/"/>
+        <bindProcessor rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/Get_US_Pop_5_Image/"/>
+        <activityPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</activityPosition>
+        <inputPortBinding>
+            <InputPortBinding rdf:about="processorbinding/Get_US_Pop_5_Image/in/url">
+                <bindInputActivityPort rdf:resource="activity/Get_US_Pop_5_Image/in/url"/>
+                <bindInputProcessorPort rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/Get_US_Pop_5_Image/in/url"/>
+            </InputPortBinding>
+        </inputPortBinding>
+        <outputPortBinding>
+            <OutputPortBinding rdf:about="processorbinding/Get_US_Pop_5_Image/out/image">
+                <bindOutputActivityPort rdf:resource="activity/Get_US_Pop_5_Image/out/image"/>
+                <bindOutputProcessorPort rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/Get_US_Pop_5_Image/out/image"/>
+            </OutputPortBinding>
+        </outputPortBinding>
+    </ProcessorBinding>
+    <ProcessorBinding rdf:about="processorbinding/US_Pop_at_15_URL/">
+        <name>US_Pop_at_15_URL</name>
+        <bindActivity rdf:resource="activity/US_Pop_at_15_URL/"/>
+        <bindProcessor rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/US_Pop_at_15_URL/"/>
+        <activityPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</activityPosition>
+        <outputPortBinding>
+            <OutputPortBinding rdf:about="processorbinding/US_Pop_at_15_URL/out/value">
+                <bindOutputActivityPort rdf:resource="activity/US_Pop_at_15_URL/out/value"/>
+                <bindOutputProcessorPort rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/US_Pop_at_15_URL/out/value"/>
+            </OutputPortBinding>
+        </outputPortBinding>
+    </ProcessorBinding>
+    <ProcessorBinding rdf:about="processorbinding/US_Pop_at_5_URL/">
+        <name>US_Pop_at_5_URL</name>
+        <bindActivity rdf:resource="activity/US_Pop_at_5_URL/"/>
+        <bindProcessor rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/US_Pop_at_5_URL/"/>
+        <activityPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</activityPosition>
+        <outputPortBinding>
+            <OutputPortBinding rdf:about="processorbinding/US_Pop_at_5_URL/out/value">
+                <bindOutputActivityPort rdf:resource="activity/US_Pop_at_5_URL/out/value"/>
+                <bindOutputProcessorPort rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/US_Pop_at_5_URL/out/value"/>
+            </OutputPortBinding>
+        </outputPortBinding>
+    </ProcessorBinding>
+    <Configuration rdf:about="configuration/China_Pop_at_15_URL/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/constant#Config"/>
+        <rdfs:seeAlso rdf:resource="configuration/China_Pop_at_15_URL.json"/>
+        <name>China_Pop_at_15_URL</name>
+        <configure rdf:resource="activity/China_Pop_at_15_URL/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/China_Pop_at_15_URL-proc/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/scufl2#ProcessorConfig"/>
+        <rdfs:seeAlso rdf:resource="configuration/China_Pop_at_15_URL-proc.json"/>
+        <name>China_Pop_at_15_URL-proc</name>
+        <configure rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/China_Pop_at_15_URL/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/Get_China_Pop_15_Image/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/beanshell#Config"/>
+        <rdfs:seeAlso rdf:resource="configuration/Get_China_Pop_15_Image.json"/>
+        <name>Get_China_Pop_15_Image</name>
+        <configure rdf:resource="activity/Get_China_Pop_15_Image/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/Get_China_Pop_15_Image-proc/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/scufl2#ProcessorConfig"/>
+        <rdfs:seeAlso rdf:resource="configuration/Get_China_Pop_15_Image-proc.json"/>
+        <name>Get_China_Pop_15_Image-proc</name>
+        <configure rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/Get_China_Pop_15_Image/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/Get_US_Pop_15_Image/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/beanshell#Config"/>
+        <rdfs:seeAlso rdf:resource="configuration/Get_US_Pop_15_Image.json"/>
+        <name>Get_US_Pop_15_Image</name>
+        <configure rdf:resource="activity/Get_US_Pop_15_Image/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/Get_US_Pop_15_Image-proc/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/scufl2#ProcessorConfig"/>
+        <rdfs:seeAlso rdf:resource="configuration/Get_US_Pop_15_Image-proc.json"/>
+        <name>Get_US_Pop_15_Image-proc</name>
+        <configure rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/Get_US_Pop_15_Image/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/Get_US_Pop_5_Image/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/beanshell#Config"/>
+        <rdfs:seeAlso rdf:resource="configuration/Get_US_Pop_5_Image.json"/>
+        <name>Get_US_Pop_5_Image</name>
+        <configure rdf:resource="activity/Get_US_Pop_5_Image/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/Get_US_Pop_5_Image-proc/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/scufl2#ProcessorConfig"/>
+        <rdfs:seeAlso rdf:resource="configuration/Get_US_Pop_5_Image-proc.json"/>
+        <name>Get_US_Pop_5_Image-proc</name>
+        <configure rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/Get_US_Pop_5_Image/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/US_Pop_at_15_URL/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/constant#Config"/>
+        <rdfs:seeAlso rdf:resource="configuration/US_Pop_at_15_URL.json"/>
+        <name>US_Pop_at_15_URL</name>
+        <configure rdf:resource="activity/US_Pop_at_15_URL/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/US_Pop_at_15_URL-proc/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/scufl2#ProcessorConfig"/>
+        <rdfs:seeAlso rdf:resource="configuration/US_Pop_at_15_URL-proc.json"/>
+        <name>US_Pop_at_15_URL-proc</name>
+        <configure rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/US_Pop_at_15_URL/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/US_Pop_at_5_URL/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/activity/constant#Config"/>
+        <rdfs:seeAlso rdf:resource="configuration/US_Pop_at_5_URL.json"/>
+        <name>US_Pop_at_5_URL</name>
+        <configure rdf:resource="activity/US_Pop_at_5_URL/"/>
+    </Configuration>
+    <Configuration rdf:about="configuration/US_Pop_at_5_URL-proc/">
+        <rdf:type rdf:resource="http://ns.taverna.org.uk/2010/scufl2#ProcessorConfig"/>
+        <rdfs:seeAlso rdf:resource="configuration/US_Pop_at_5_URL-proc.json"/>
+        <name>US_Pop_at_5_URL-proc</name>
+        <configure rdf:resource="../../workflow/A_Comparison_of_China_and_US_populations/processor/US_Pop_at_5_URL/"/>
+    </Configuration>
+</rdf:RDF>

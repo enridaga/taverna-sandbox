@@ -1,0 +1,3 @@
+<../workflow/Workflow1/in/Nodes> <http://biocatalogue.org/attribute/exampleData> """resolutionOfImages=1024
+frameRate=25
+...""" .

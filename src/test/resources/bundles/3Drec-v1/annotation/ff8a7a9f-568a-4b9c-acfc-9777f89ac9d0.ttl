@@ -1,0 +1,1 @@
+<../workflow/Workflow1/processor/AvarageTimeTracker/> <http://purl.org/dc/terms/description> """Hadoop application analysing saved metadata, just extracting some particular information about environment etc. wrt AnalyseParameter2, for example avarage memory usage of cluster when processing inputs from 1 to 100.""" .

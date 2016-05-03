@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns="http://ns.taverna.org.uk/2010/scufl2#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="WorkflowDocument" xml:base="Workflow1/" xsi:schemaLocation="http://ns.taverna.org.uk/2010/scufl2# http://ns.taverna.org.uk/2010/scufl2/scufl2.xsd http://www.w3.org/1999/02/22-rdf-syntax-ns# http://ns.taverna.org.uk/2010/scufl2/rdf.xsd">
+    <Workflow rdf:about="">
+        <name>Workflow1</name>
+        <workflowIdentifier rdf:resource="http://ns.taverna.org.uk/2010/workflow/3e6ed6a4-25c5-423a-960e-a5450802b897/"/>
+        <inputWorkflowPort>
+            <InputWorkflowPort rdf:about="in/CoresPerNode">
+                <name>CoresPerNode</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+            </InputWorkflowPort>
+        </inputWorkflowPort>
+        <inputWorkflowPort>
+            <InputWorkflowPort rdf:about="in/DataSetPath">
+                <name>DataSetPath</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+            </InputWorkflowPort>
+        </inputWorkflowPort>
+        <inputWorkflowPort>
+            <InputWorkflowPort rdf:about="in/Nodes">
+                <name>Nodes</name>
+                <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+            </InputWorkflowPort>
+        </inputWorkflowPort>
+        <outputWorkflowPort>
+            <OutputWorkflowPort rdf:about="out/ExperimentResultsAndMetadata">
+                <name>ExperimentResultsAndMetadata</name>
+            </OutputWorkflowPort>
+        </outputWorkflowPort>
+        <processor>
+            <Processor rdf:about="processor/3DReconstructionApplication/">
+                <name>3DReconstructionApplication</name>
+                <inputProcessorPort>
+                    <InputProcessorPort rdf:about="processor/3DReconstructionApplication/in/CoresPerNode">
+                        <name>CoresPerNode</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                    </InputProcessorPort>
+                </inputProcessorPort>
+                <inputProcessorPort>
+                    <InputProcessorPort rdf:about="processor/3DReconstructionApplication/in/Nodes">
+                        <name>Nodes</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                    </InputProcessorPort>
+                </inputProcessorPort>
+                <inputProcessorPort>
+                    <InputProcessorPort rdf:about="processor/3DReconstructionApplication/in/dataSetPath">
+                        <name>dataSetPath</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                    </InputProcessorPort>
+                </inputProcessorPort>
+                <outputProcessorPort>
+                    <OutputProcessorPort rdf:about="processor/3DReconstructionApplication/out/STDOUT">
+                        <name>STDOUT</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                        <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+                    </OutputProcessorPort>
+                </outputProcessorPort>
+                <outputProcessorPort>
+                    <OutputProcessorPort rdf:about="processor/3DReconstructionApplication/out/metadataPath">
+                        <name>metadataPath</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                        <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+                    </OutputProcessorPort>
+                </outputProcessorPort>
+                <iterationStrategyStack>
+                    <IterationStrategyStack rdf:about="processor/3DReconstructionApplication/iterationstrategy/">
+                        <iterationStrategies rdf:parseType="Collection">
+                            <CrossProduct rdf:about="processor/3DReconstructionApplication/iterationstrategy/0/">
+<productOf rdf:parseType="Collection">
+    <PortNode rdf:about="processor/3DReconstructionApplication/iterationstrategy/0/0/">
+        <iterateOverInputPort rdf:resource="processor/3DReconstructionApplication/in/dataSetPath"/>
+        <desiredDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</desiredDepth>
+    </PortNode>
+    <PortNode rdf:about="processor/3DReconstructionApplication/iterationstrategy/0/1/">
+        <iterateOverInputPort rdf:resource="processor/3DReconstructionApplication/in/Nodes"/>
+        <desiredDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</desiredDepth>
+    </PortNode>
+    <PortNode rdf:about="processor/3DReconstructionApplication/iterationstrategy/0/2/">
+        <iterateOverInputPort rdf:resource="processor/3DReconstructionApplication/in/CoresPerNode"/>
+        <desiredDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</desiredDepth>
+    </PortNode>
+</productOf>
+                            </CrossProduct>
+                        </iterationStrategies>
+                    </IterationStrategyStack>
+                </iterationStrategyStack>
+            </Processor>
+        </processor>
+        <processor>
+            <Processor rdf:about="processor/AvarageTimeMatcher/">
+                <name>AvarageTimeMatcher</name>
+                <inputProcessorPort>
+                    <InputProcessorPort rdf:about="processor/AvarageTimeMatcher/in/experimentMetadataPath">
+                        <name>experimentMetadataPath</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                    </InputProcessorPort>
+                </inputProcessorPort>
+                <outputProcessorPort>
+                    <OutputProcessorPort rdf:about="processor/AvarageTimeMatcher/out/hadoopResults2">
+                        <name>hadoopResults2</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                        <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+                    </OutputProcessorPort>
+                </outputProcessorPort>
+                <iterationStrategyStack>
+                    <IterationStrategyStack rdf:about="processor/AvarageTimeMatcher/iterationstrategy/">
+                        <iterationStrategies rdf:parseType="Collection">
+                            <CrossProduct rdf:about="processor/AvarageTimeMatcher/iterationstrategy/0/">
+<productOf rdf:parseType="Collection">
+    <PortNode rdf:about="processor/AvarageTimeMatcher/iterationstrategy/0/0/">
+        <iterateOverInputPort rdf:resource="processor/AvarageTimeMatcher/in/experimentMetadataPath"/>
+        <desiredDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</desiredDepth>
+    </PortNode>
+</productOf>
+                            </CrossProduct>
+                        </iterationStrategies>
+                    </IterationStrategyStack>
+                </iterationStrategyStack>
+            </Processor>
+        </processor>
+        <processor>
+            <Processor rdf:about="processor/AvarageTimeSIFT/">
+                <name>AvarageTimeSIFT</name>
+                <inputProcessorPort>
+                    <InputProcessorPort rdf:about="processor/AvarageTimeSIFT/in/experimentMetadataPath">
+                        <name>experimentMetadataPath</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                    </InputProcessorPort>
+                </inputProcessorPort>
+                <outputProcessorPort>
+                    <OutputProcessorPort rdf:about="processor/AvarageTimeSIFT/out/hadoopResult1">
+                        <name>hadoopResult1</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                        <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+                    </OutputProcessorPort>
+                </outputProcessorPort>
+                <iterationStrategyStack>
+                    <IterationStrategyStack rdf:about="processor/AvarageTimeSIFT/iterationstrategy/">
+                        <iterationStrategies rdf:parseType="Collection">
+                            <CrossProduct rdf:about="processor/AvarageTimeSIFT/iterationstrategy/0/">
+<productOf rdf:parseType="Collection">
+    <PortNode rdf:about="processor/AvarageTimeSIFT/iterationstrategy/0/0/">
+        <iterateOverInputPort rdf:resource="processor/AvarageTimeSIFT/in/experimentMetadataPath"/>
+        <desiredDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</desiredDepth>
+    </PortNode>
+</productOf>
+                            </CrossProduct>
+                        </iterationStrategies>
+                    </IterationStrategyStack>
+                </iterationStrategyStack>
+            </Processor>
+        </processor>
+        <processor>
+            <Processor rdf:about="processor/AvarageTimeTracker/">
+                <name>AvarageTimeTracker</name>
+                <inputProcessorPort>
+                    <InputProcessorPort rdf:about="processor/AvarageTimeTracker/in/experimentMetadataPath">
+                        <name>experimentMetadataPath</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                    </InputProcessorPort>
+                </inputProcessorPort>
+                <outputProcessorPort>
+                    <OutputProcessorPort rdf:about="processor/AvarageTimeTracker/out/hadoopResults2">
+                        <name>hadoopResults2</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                        <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+                    </OutputProcessorPort>
+                </outputProcessorPort>
+                <iterationStrategyStack>
+                    <IterationStrategyStack rdf:about="processor/AvarageTimeTracker/iterationstrategy/">
+                        <iterationStrategies rdf:parseType="Collection">
+                            <CrossProduct rdf:about="processor/AvarageTimeTracker/iterationstrategy/0/">
+<productOf rdf:parseType="Collection">
+    <PortNode rdf:about="processor/AvarageTimeTracker/iterationstrategy/0/0/">
+        <iterateOverInputPort rdf:resource="processor/AvarageTimeTracker/in/experimentMetadataPath"/>
+        <desiredDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</desiredDepth>
+    </PortNode>
+</productOf>
+                            </CrossProduct>
+                        </iterationStrategies>
+                    </IterationStrategyStack>
+                </iterationStrategyStack>
+            </Processor>
+        </processor>
+        <processor>
+            <Processor rdf:about="processor/SFTPtransportDataToCluster/">
+                <name>SFTPtransportDataToCluster</name>
+                <inputProcessorPort>
+                    <InputProcessorPort rdf:about="processor/SFTPtransportDataToCluster/in/sftpInput">
+                        <name>sftpInput</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                    </InputProcessorPort>
+                </inputProcessorPort>
+                <outputProcessorPort>
+                    <OutputProcessorPort rdf:about="processor/SFTPtransportDataToCluster/out/clusterDataSetPath">
+                        <name>clusterDataSetPath</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                        <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+                    </OutputProcessorPort>
+                </outputProcessorPort>
+                <iterationStrategyStack>
+                    <IterationStrategyStack rdf:about="processor/SFTPtransportDataToCluster/iterationstrategy/">
+                        <iterationStrategies rdf:parseType="Collection">
+                            <CrossProduct rdf:about="processor/SFTPtransportDataToCluster/iterationstrategy/0/">
+<productOf rdf:parseType="Collection">
+    <PortNode rdf:about="processor/SFTPtransportDataToCluster/iterationstrategy/0/0/">
+        <iterateOverInputPort rdf:resource="processor/SFTPtransportDataToCluster/in/sftpInput"/>
+        <desiredDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</desiredDepth>
+    </PortNode>
+</productOf>
+                            </CrossProduct>
+                        </iterationStrategies>
+                    </IterationStrategyStack>
+                </iterationStrategyStack>
+            </Processor>
+        </processor>
+        <processor>
+            <Processor rdf:about="processor/SFTPtransportMetadataAndResultsToLocal/">
+                <name>SFTPtransportMetadataAndResultsToLocal</name>
+                <inputProcessorPort>
+                    <InputProcessorPort rdf:about="processor/SFTPtransportMetadataAndResultsToLocal/in/ftpsIn">
+                        <name>ftpsIn</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                    </InputProcessorPort>
+                </inputProcessorPort>
+                <outputProcessorPort>
+                    <OutputProcessorPort rdf:about="processor/SFTPtransportMetadataAndResultsToLocal/out/localResultsPath">
+                        <name>localResultsPath</name>
+                        <portDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</portDepth>
+                        <granularPortDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</granularPortDepth>
+                    </OutputProcessorPort>
+                </outputProcessorPort>
+                <iterationStrategyStack>
+                    <IterationStrategyStack rdf:about="processor/SFTPtransportMetadataAndResultsToLocal/iterationstrategy/">
+                        <iterationStrategies rdf:parseType="Collection">
+                            <CrossProduct rdf:about="processor/SFTPtransportMetadataAndResultsToLocal/iterationstrategy/0/">
+<productOf rdf:parseType="Collection">
+    <PortNode rdf:about="processor/SFTPtransportMetadataAndResultsToLocal/iterationstrategy/0/0/">
+        <iterateOverInputPort rdf:resource="processor/SFTPtransportMetadataAndResultsToLocal/in/ftpsIn"/>
+        <desiredDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</desiredDepth>
+    </PortNode>
+</productOf>
+                            </CrossProduct>
+                        </iterationStrategies>
+                    </IterationStrategyStack>
+                </iterationStrategyStack>
+            </Processor>
+        </processor>
+        <datalink>
+            <DataLink rdf:about="datalink?from=processor/3DReconstructionApplication/out/STDOUT&amp;to=processor/AvarageTimeTracker/in/experimentMetadataPath">
+                <receiveFrom rdf:resource="processor/3DReconstructionApplication/out/STDOUT"/>
+                <sendTo rdf:resource="processor/AvarageTimeTracker/in/experimentMetadataPath"/>
+            </DataLink>
+        </datalink>
+        <datalink>
+            <DataLink rdf:about="datalink?from=processor/3DReconstructionApplication/out/metadataPath&amp;to=processor/AvarageTimeMatcher/in/experimentMetadataPath">
+                <receiveFrom rdf:resource="processor/3DReconstructionApplication/out/metadataPath"/>
+                <sendTo rdf:resource="processor/AvarageTimeMatcher/in/experimentMetadataPath"/>
+            </DataLink>
+        </datalink>
+        <datalink>
+            <DataLink rdf:about="datalink?from=processor/3DReconstructionApplication/out/metadataPath&amp;to=processor/AvarageTimeSIFT/in/experimentMetadataPath">
+                <receiveFrom rdf:resource="processor/3DReconstructionApplication/out/metadataPath"/>
+                <sendTo rdf:resource="processor/AvarageTimeSIFT/in/experimentMetadataPath"/>
+            </DataLink>
+        </datalink>
+        <datalink>
+            <DataLink rdf:about="datalink?from=processor/3DReconstructionApplication/out/metadataPath&amp;to=processor/SFTPtransportMetadataAndResultsToLocal/in/ftpsIn&amp;mergePosition=2">
+                <receiveFrom rdf:resource="processor/3DReconstructionApplication/out/metadataPath"/>
+                <sendTo rdf:resource="processor/SFTPtransportMetadataAndResultsToLocal/in/ftpsIn"/>
+                <mergePosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</mergePosition>
+            </DataLink>
+        </datalink>
+        <datalink>
+            <DataLink rdf:about="datalink?from=processor/AvarageTimeMatcher/out/hadoopResults2&amp;to=processor/SFTPtransportMetadataAndResultsToLocal/in/ftpsIn&amp;mergePosition=1">
+                <receiveFrom rdf:resource="processor/AvarageTimeMatcher/out/hadoopResults2"/>
+                <sendTo rdf:resource="processor/SFTPtransportMetadataAndResultsToLocal/in/ftpsIn"/>
+                <mergePosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mergePosition>
+            </DataLink>
+        </datalink>
+        <datalink>
+            <DataLink rdf:about="datalink?from=processor/AvarageTimeSIFT/out/hadoopResult1&amp;to=processor/SFTPtransportMetadataAndResultsToLocal/in/ftpsIn&amp;mergePosition=0">
+                <receiveFrom rdf:resource="processor/AvarageTimeSIFT/out/hadoopResult1"/>
+                <sendTo rdf:resource="processor/SFTPtransportMetadataAndResultsToLocal/in/ftpsIn"/>
+                <mergePosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</mergePosition>
+            </DataLink>
+        </datalink>
+        <datalink>
+            <DataLink rdf:about="datalink?from=processor/AvarageTimeTracker/out/hadoopResults2&amp;to=processor/SFTPtransportMetadataAndResultsToLocal/in/ftpsIn&amp;mergePosition=3">
+                <receiveFrom rdf:resource="processor/AvarageTimeTracker/out/hadoopResults2"/>
+                <sendTo rdf:resource="processor/SFTPtransportMetadataAndResultsToLocal/in/ftpsIn"/>
+                <mergePosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</mergePosition>
+            </DataLink>
+        </datalink>
+        <datalink>
+            <DataLink rdf:about="datalink?from=processor/SFTPtransportDataToCluster/out/clusterDataSetPath&amp;to=processor/3DReconstructionApplication/in/dataSetPath">
+                <receiveFrom rdf:resource="processor/SFTPtransportDataToCluster/out/clusterDataSetPath"/>
+                <sendTo rdf:resource="processor/3DReconstructionApplication/in/dataSetPath"/>
+            </DataLink>
+        </datalink>
+        <datalink>
+            <DataLink rdf:about="datalink?from=processor/SFTPtransportMetadataAndResultsToLocal/out/localResultsPath&amp;to=out/ExperimentResultsAndMetadata">
+                <receiveFrom rdf:resource="processor/SFTPtransportMetadataAndResultsToLocal/out/localResultsPath"/>
+                <sendTo rdf:resource="out/ExperimentResultsAndMetadata"/>
+            </DataLink>
+        </datalink>
+        <datalink>
+            <DataLink rdf:about="datalink?from=in/CoresPerNode&amp;to=processor/3DReconstructionApplication/in/CoresPerNode">
+                <receiveFrom rdf:resource="in/CoresPerNode"/>
+                <sendTo rdf:resource="processor/3DReconstructionApplication/in/CoresPerNode"/>
+            </DataLink>
+        </datalink>
+        <datalink>
+            <DataLink rdf:about="datalink?from=in/DataSetPath&amp;to=processor/SFTPtransportDataToCluster/in/sftpInput">
+                <receiveFrom rdf:resource="in/DataSetPath"/>
+                <sendTo rdf:resource="processor/SFTPtransportDataToCluster/in/sftpInput"/>
+            </DataLink>
+        </datalink>
+        <datalink>
+            <DataLink rdf:about="datalink?from=in/Nodes&amp;to=processor/3DReconstructionApplication/in/Nodes">
+                <receiveFrom rdf:resource="in/Nodes"/>
+                <sendTo rdf:resource="processor/3DReconstructionApplication/in/Nodes"/>
+            </DataLink>
+        </datalink>
+        <control>
+            <Blocking rdf:about="control?block=processor/AvarageTimeMatcher/&amp;untilFinished=processor/3DReconstructionApplication/">
+                <block rdf:resource="processor/AvarageTimeMatcher/"/>
+                <untilFinished rdf:resource="processor/3DReconstructionApplication/"/>
+            </Blocking>
+        </control>
+        <control>
+            <Blocking rdf:about="control?block=processor/AvarageTimeSIFT/&amp;untilFinished=processor/3DReconstructionApplication/">
+                <block rdf:resource="processor/AvarageTimeSIFT/"/>
+                <untilFinished rdf:resource="processor/3DReconstructionApplication/"/>
+            </Blocking>
+        </control>
+        <control>
+            <Blocking rdf:about="control?block=processor/AvarageTimeTracker/&amp;untilFinished=processor/3DReconstructionApplication/">
+                <block rdf:resource="processor/AvarageTimeTracker/"/>
+                <untilFinished rdf:resource="processor/3DReconstructionApplication/"/>
+            </Blocking>
+        </control>
+    </Workflow>
+</rdf:RDF>

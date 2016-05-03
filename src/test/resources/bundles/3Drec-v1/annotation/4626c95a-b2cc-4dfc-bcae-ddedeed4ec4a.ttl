@@ -1,0 +1,1 @@
+<../workflow/Workflow1/processor/SFTPtransportMetadataAndResultsToLocal/> <http://purl.org/dc/terms/description> """Transfer all the metadata and results of experiment and results of hadoop analysis from the cluster back to the local computer.""" .

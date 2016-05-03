@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest:manifest xmlns:manifest="urn:oasis:names:tc:opendocument:xmlns:manifest:1.0">
+ <manifest:file-entry manifest:media-type="text/turtle" manifest:full-path="annotation/"/>
+ <manifest:file-entry manifest:media-type="text/turtle" manifest:full-path="annotation/d0d26006-be03-452a-b75a-52dd5b5901c9.ttl" manifest:size="122"/>
+ <manifest:file-entry manifest:media-type="text/turtle" manifest:full-path="annotation/37953b92-11c0-4b23-93fb-443a00bac274.ttl" manifest:size="457"/>
+ <manifest:file-entry manifest:media-type="text/turtle" manifest:full-path="annotation/b60a0910-66a6-4d1c-aa8d-f671126dc9f9.ttl" manifest:size="137"/>
+ <manifest:file-entry manifest:media-type="application/vnd.taverna.t2flow+xml" manifest:full-path="history/"/>
+ <manifest:file-entry manifest:media-type="application/vnd.taverna.t2flow+xml" manifest:full-path="history/f93f1bd9-24d5-40ce-b274-0e272e1f427c.t2flow" manifest:size="36026"/>
+ <manifest:file-entry manifest:media-type="application/rdf+xml" manifest:full-path="workflow/"/>
+ <manifest:file-entry manifest:media-type="application/rdf+xml" manifest:full-path="workflow/A_Comparison_of_China_and_US_populations.rdf" manifest:size="11681"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.3.0/"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.3.0/configuration/"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.3.0/configuration/China_Pop_at_15_URL.json" manifest:size="501"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.3.0/configuration/China_Pop_at_15_URL-proc.json" manifest:size="2"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.3.0/configuration/Get_China_Pop_15_Image.json" manifest:size="717"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.3.0/configuration/Get_China_Pop_15_Image-proc.json" manifest:size="2"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.3.0/configuration/Get_US_Pop_15_Image.json" manifest:size="717"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.3.0/configuration/Get_US_Pop_15_Image-proc.json" manifest:size="2"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.3.0/configuration/Get_US_Pop_5_Image.json" manifest:size="717"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.3.0/configuration/Get_US_Pop_5_Image-proc.json" manifest:size="2"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.3.0/configuration/US_Pop_at_15_URL.json" manifest:size="507"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.3.0/configuration/US_Pop_at_15_URL-proc.json" manifest:size="2"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.3.0/configuration/US_Pop_at_5_URL.json" manifest:size="506"/>
+ <manifest:file-entry manifest:media-type="application/json" manifest:full-path="profile/taverna-2.3.0/configuration/US_Pop_at_5_URL-proc.json" manifest:size="2"/>
+ <manifest:file-entry manifest:media-type="application/rdf+xml" manifest:full-path="profile/taverna-2.3.0.rdf" manifest:size="18785"/>
+ <manifest:file-entry manifest:media-type="application/rdf+xml" manifest:full-path="workflowBundle.rdf" manifest:size="1360" manifest:version="0.4.0"/>
+</manifest:manifest>

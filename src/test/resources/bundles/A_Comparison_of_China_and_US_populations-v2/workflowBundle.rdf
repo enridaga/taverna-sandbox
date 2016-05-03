@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://ns.taverna.org.uk/2010/scufl2#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="WorkflowBundleDocument" xml:base="./" xsi:schemaLocation="http://ns.taverna.org.uk/2010/scufl2# http://ns.taverna.org.uk/2010/scufl2/scufl2.xsd http://www.w3.org/1999/02/22-rdf-syntax-ns# http://ns.taverna.org.uk/2010/scufl2/rdf.xsd">
+    <WorkflowBundle rdf:about="">
+        <name>A_Comparison_of_China_and_US_populations</name>
+        <globalBaseURI rdf:resource="http://ns.taverna.org.uk/2010/workflowBundle/f93f1bd9-24d5-40ce-b274-0e272e1f427c/"/>
+        <mainWorkflow rdf:resource="workflow/A_Comparison_of_China_and_US_populations/"/>
+        <workflow>
+            <Workflow rdf:about="workflow/A_Comparison_of_China_and_US_populations/">
+                <rdfs:seeAlso rdf:resource="workflow/A_Comparison_of_China_and_US_populations.rdf"/>
+            </Workflow>
+        </workflow>
+        <mainProfile rdf:resource="profile/taverna-2.3.0/"/>
+        <profile>
+            <Profile rdf:about="profile/taverna-2.3.0/">
+                <rdfs:seeAlso rdf:resource="profile/taverna-2.3.0.rdf"/>
+            </Profile>
+        </profile>
+    </WorkflowBundle>
+</rdf:RDF>
