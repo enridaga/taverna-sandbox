@@ -51,6 +51,7 @@ public class AppTest extends TestCase {
 	 * @throws ReaderException
 	 */
 	public void testApp() throws IOException, ReaderException {
+		System.out.println("####################");
 		// Try reading annotations from 3Drec-v1
 		// http://www.myexperiment.org/workflows/4303.html
 		WorkflowBundleIO io = new WorkflowBundleIO();
@@ -82,7 +83,7 @@ public class AppTest extends TestCase {
 		System.out.println("Print as NQuads:");
 		// https://jena.apache.org/documentation/javadoc/arq/org/apache/jena/riot/RDFDataMgr.html
 		RDFDataMgr.write(System.out, ds, Lang.NQUADS);
-
-		assertTrue(true);
+		System.out.println("####################");
+		assertTrue(false);
 	}
 }
