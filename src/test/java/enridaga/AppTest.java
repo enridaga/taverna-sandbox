@@ -2,18 +2,27 @@ package enridaga;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
 
 import org.apache.jena.query.Dataset;
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.ResIterator;
+import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
+import org.apache.jena.riot.RDFLanguages;
 import org.apache.taverna.scufl2.annotation.AnnotationTools;
 import org.apache.taverna.scufl2.api.annotation.Annotation;
 import org.apache.taverna.scufl2.api.common.Child;
+import org.apache.taverna.scufl2.api.common.URITools;
+import org.apache.taverna.scufl2.api.common.WorkflowBean;
 import org.apache.taverna.scufl2.api.container.WorkflowBundle;
 import org.apache.taverna.scufl2.api.core.Workflow;
 import org.apache.taverna.scufl2.api.io.ReaderException;
 import org.apache.taverna.scufl2.api.io.WorkflowBundleIO;
 import org.apache.taverna.scufl2.api.port.InputPort;
+import org.apache.taverna.scufl2.ucfpackage.UCFPackage.ResourceEntry;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -60,7 +69,10 @@ public class AppTest extends TestCase {
 		/**
 		 * 1. The description of a workflow (as I can see it on the myexperiment
 		 * portal)
-		 */
+		 */		
+		// TAVERNA-71 workaround
+		parseAnnotations(wb);
+		
 		System.out.println("Annotations: " + wb.getAnnotations().size());
 		for (Annotation a : wb.getAnnotations()) {
 			System.out.println(a.getRDFContent());
@@ -85,5 +97,45 @@ public class AppTest extends TestCase {
 		RDFDataMgr.write(System.out, ds, Lang.NQUADS);
 		System.out.println("####################");
 		assertTrue(false);
+	}
+
+	private void parseAnnotations(final WorkflowBundle wb) throws IOException {
+		if (! wb.getAnnotations().isEmpty()) {
+			// Assume already parsed
+			return;
+		}
+		URITools uriTools = new URITools();		
+		for (ResourceEntry resource : wb.getResources().listResources("annotation").values()) {
+			Lang lang = RDFLanguages.contentTypeToLang(resource.getMediaType());
+			if (lang == null) {
+				// Not a semantic annotation
+				continue;
+			}
+			Annotation ann = new Annotation();
+			// Hackish way to generate a name from the annotation filename
+			String name = resource.getPath().replace("annotation/", "").replaceAll("\\..*", ""); // strip extension
+			ann.setName(name);
+			ann.setParent(wb);
+			
+			String path = resource.getPath();
+			ann.setBody(URI.create("/" + path));			
+			//System.out.println(path);			
+			URI base = wb.getGlobalBaseURI().resolve(path);
+			Model model = ModelFactory.createDefaultModel();			
+			RDFDataMgr.read(model, resource.getUcfPackage().getResourceAsInputStream(path), 
+					base.toASCIIString(), lang);
+			ResIterator subjs = model.listSubjects();			
+			while (subjs.hasNext()) { 
+				Resource r = subjs.next();
+				//System.out.println(r);
+				WorkflowBean b = uriTools.resolveUri(URI.create(r.getURI()), wb);
+				//System.out.println(b);
+				if (b != null) {
+					ann.setTarget(b);
+				}
+				break;
+			}
+			// TODO: Could just dump the nquads directly from here
+		}
 	}
 }
